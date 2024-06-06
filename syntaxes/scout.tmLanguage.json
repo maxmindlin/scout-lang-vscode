@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ScoutLang",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#selects"
+		}
+		
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.scout",
+				"match": "\\b(if|while|for|return|in|scrape|goto|do|end|screenshot)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.scout",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scout",
+					"match": "\\\\."
+				}
+			]
+		},
+		"selects": {
+			"patterns": [{
+				"name": "support.function.select.scout",
+				"match": "\\$.*\""
+			}]
+		}
+	},
+	"scopeName": "source.sct"
+}
