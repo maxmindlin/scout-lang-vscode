@@ -10,6 +10,9 @@
 		},
 		{
 			"include": "#selects"
+		},
+		{
+			"include": "#function"
 		}
 		
 	],
@@ -35,6 +38,12 @@
 			"patterns": [{
 				"name": "support.function.select.scout",
 				"match": "\\$.*\""
+			}]
+		},
+		"function": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "\\w*\\("
 			}]
 		}
 	},
