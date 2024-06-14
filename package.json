@@ -2,6 +2,8 @@
   "name": "scout-lang-vscode",
   "displayName": "scout-lang-vscode",
   "description": "ScoutLang VSCode extension",
+  "repository": "https://github.com/maxmindlin/scout-lang-vscode",
+  "publisher": "ScoutLang",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.89.0"
@@ -10,16 +12,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "scout",
-      "aliases": ["ScoutLang", "scout"],
-      "extensions": [".sct"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "scout",
-      "scopeName": "source.sct",
-      "path": "./syntaxes/scout.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "scout",
+        "aliases": [
+          "ScoutLang",
+          "scout"
+        ],
+        "extensions": [
+          ".sct"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "scout",
+        "scopeName": "source.sct",
+        "path": "./syntaxes/scout.tmLanguage.json"
+      }
+    ]
   }
 }
