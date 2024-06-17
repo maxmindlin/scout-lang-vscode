@@ -3,6 +3,9 @@
 	"name": "ScoutLang",
 	"patterns": [
 		{
+			"include": "#comment"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -17,32 +20,38 @@
 		
 	],
 	"repository": {
+		"comment": {
+			"patterns": [{
+				"match": "(//).*$\\n?",
+           		"name": "comment.line"
+			}]
+		},
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.scout",
-				"match": "\\b(if|while|for|return|in|scrape|goto|do|end|screenshot)\\b"
+				"name": "keyword.control.sct",
+				"match": "\\b(if|while|for|return|in|scrape|goto|do|end|screenshot|def)\\b"
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.scout",
+			"name": "string.quoted.double.sct",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.scout",
+					"name": "constant.character.escape.sct",
 					"match": "\\\\."
 				}
 			]
 		},
 		"selects": {
 			"patterns": [{
-				"name": "support.function.select.scout",
+				"name": "support.function.select.sct",
 				"match": "\\$.*\""
 			}]
 		},
 		"function": {
 			"patterns": [{
-				"name": "entity.name.function",
+				"name": "entity.name.function.sct",
 				"match": "\\w*\\("
 			}]
 		}
