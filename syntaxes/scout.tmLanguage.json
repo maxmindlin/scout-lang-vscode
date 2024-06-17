@@ -29,7 +29,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.sct",
-				"match": "\\b(if|while|for|return|in|scrape|goto|do|end|screenshot|def)\\b"
+				"match": "\\b(if|for|return|in|scrape|goto|do|end|screenshot|def|use)\\b"
 			}]
 		},
 		"strings": {
