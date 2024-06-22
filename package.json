@@ -5,7 +5,7 @@
   "repository": "https://github.com/maxmindlin/scout-lang-vscode",
   "publisher": "ScoutLang",
   "icon": "assets/icon.png",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.89.0"
   },

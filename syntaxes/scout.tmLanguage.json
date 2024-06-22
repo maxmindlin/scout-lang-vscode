@@ -31,7 +31,7 @@
       "patterns": [
         {
           "name": "keyword.control.sct",
-          "match": "\\b(if|elif|else|for|return|in|scrape|goto|do|end|screenshot|def|use)\\b"
+          "match": "\\b(if|elif|else|for|return|in|scrape|goto|do|end|screenshot|def|use|null)\\b"
         }
       ]
     },
