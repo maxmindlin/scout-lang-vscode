@@ -1,60 +1,67 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "ScoutLang",
-	"patterns": [
-		{
-			"include": "#comment"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#selects"
-		},
-		{
-			"include": "#function"
-		}
-		
-	],
-	"repository": {
-		"comment": {
-			"patterns": [{
-				"match": "(//).*$\\n?",
-           		"name": "comment.line"
-			}]
-		},
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.sct",
-				"match": "\\b(if|for|return|in|scrape|goto|do|end|screenshot|def|use)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.sct",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.sct",
-					"match": "\\\\."
-				}
-			]
-		},
-		"selects": {
-			"patterns": [{
-				"name": "support.function.select.sct",
-				"match": "\\$.*\""
-			}]
-		},
-		"function": {
-			"patterns": [{
-				"name": "entity.name.function.sct",
-				"match": "\\w*\\("
-			}]
-		}
-	},
-	"scopeName": "source.sct"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ScoutLang",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#selects"
+    },
+    {
+      "include": "#function"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "match": "(//).*$\\n?",
+          "name": "comment.line"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.sct",
+          "match": "\\b(if|elif|else|for|return|in|scrape|goto|do|end|screenshot|def|use)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.sct",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.sct",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "selects": {
+      "patterns": [
+        {
+          "name": "support.function.select.sct",
+          "match": "\\$.*\""
+        }
+      ]
+    },
+    "function": {
+      "patterns": [
+        {
+          "name": "entity.name.function.sct",
+          "match": "\\w*\\("
+        }
+      ]
+    }
+  },
+  "scopeName": "source.sct"
 }
